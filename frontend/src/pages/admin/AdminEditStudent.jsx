@@ -14,7 +14,7 @@ const AdminEditStudent = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/admin/students/${id}`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/admin/students/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStudent(res.data);
