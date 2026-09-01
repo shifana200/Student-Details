@@ -108,7 +108,7 @@ const handleSave = async () => {
       form.append('class', formData.class);
       if (imageFile) form.append('profilePic', imageFile);
   
-      const { data } = await axios.put('http://localhost:5000/api/student/profile', form, {
+      const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/api/student/profile`, form, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
