@@ -35,7 +35,7 @@ const AdminEditStudent = () => {
         updated.append(key, formData[key]);
       }
 
-      await axios.put(`http://localhost:5000/api/admin/students/${id}`, updated, {
+     await axios.put(`${import.meta.env.VITE_API_URL}/api/admin/students/${id}`, updated, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data",
