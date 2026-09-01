@@ -16,7 +16,7 @@ const StudentForm = ({ initialData = {}, onSubmit, onCancel }) => {
 
   useEffect(() => {
     if (initialData.profilePic ) {
-      setPreview(`http://localhost:5000/uploads/${initialData.profilePic}`);
+     setPreview(`${import.meta.env.VITE_API_URL}/uploads/${initialData.profilePic}`);
     }
   }, [initialData.profilePic]);
 
