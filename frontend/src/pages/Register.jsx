@@ -35,7 +35,7 @@ const Register = () => {
       Object.keys(formData).forEach((key) => data.append(key, formData[key]));
       data.append('profilePic', profilePic);
 
-      const response = await axios.post('http://localhost:5000/api/student/register', data, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/student/register`, data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
